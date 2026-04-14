@@ -5,36 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CODEX Portfolio - Caffenio Drive-Thru Interface Redesign</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
 </head>
-<body>
+<body class="bg-gradient-to-br from-rose-50 via-amber-50 to-orange-50">
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-900">CODEX</h1>
-            <ul class="flex gap-8">
-                <li><a href="#hero" class="nav-link text-gray-700 hover:text-gray-900">Home</a></li>
-                <li><a href="#problem" class="nav-link text-gray-700 hover:text-gray-900">Problem</a></li>
-                <li><a href="#solution" class="nav-link text-gray-700 hover:text-gray-900">Solution</a></li>
-                <li><a href="#process" class="nav-link text-gray-700 hover:text-gray-900">Process</a></li>
-                <li><a href="#team" class="nav-link text-gray-700 hover:text-gray-900">Team</a></li>
-                <li><a href="#impact" class="nav-link text-gray-700 hover:text-gray-900">Impact</a></li>
+    <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900" style="font-family: 'Archivo', sans-serif;">CODEX</h1>
+            <ul class="flex gap-6 text-sm">
+                <li><a href="#hero" class="nav-link text-gray-700 hover:text-red-600 transition">Home</a></li>
+                <li><a href="#problem" class="nav-link text-gray-700 hover:text-red-600 transition">Problem</a></li>
+                <li><a href="#solution" class="nav-link text-gray-700 hover:text-red-600 transition">Solution</a></li>
+                <li><a href="#process" class="nav-link text-gray-700 hover:text-red-600 transition">Process</a></li>
+                <li><a href="#team" class="nav-link text-gray-700 hover:text-red-600 transition">Team</a></li>
+                <li><a href="#impact" class="nav-link text-gray-700 hover:text-red-600 transition">Impact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="hero" class="pt-20 min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center">
-        <div class="max-w-6xl mx-auto px-6 w-full text-center">
-            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-                Caffenio Drive-Thru Interface Redesign
+    <!-- Hero Section - Welcome Screen Inspired -->
+    <section id="hero" class="pt-24 min-h-screen bg-gradient-to-b from-amber-50 to-orange-50 flex items-center relative overflow-hidden">
+        <!-- Decorative circles -->
+        <div class="absolute top-20 right-10 w-72 h-72 bg-red-200/20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-20 left-10 w-96 h-96 bg-orange-200/20 rounded-full blur-3xl"></div>
+
+        <div class="max-w-4xl mx-auto px-6 w-full text-center relative z-10">
+            <div class="mb-8">
+                <div class="inline-block">
+                    <svg class="w-24 h-24 mx-auto text-red-500 mb-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" class="opacity-20"></circle>
+                        <circle cx="12" cy="12" r="7"></circle>
+                        <path d="M9 12l2 2 4-4"></path>
+                    </svg>
+                </div>
+            </div>
+
+            <h1 class="text-6xl md:text-7xl font-bold text-gray-900 mb-6" style="font-family: 'Archivo', sans-serif;">
+                Welcome!
             </h1>
-            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
-                Improving usability, clarity, and speed through structured UX process and interactive prototyping
+            <p class="text-2xl md:text-3xl text-gray-600 mb-8" style="font-family: 'Archivo', sans-serif;">
+                Caffenio Drive-Thru Interface Redesign
             </p>
-            <p class="text-lg text-gray-500 mb-12">By CODEX Team</p>
-            <a href="#problem" class="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
-                View Prototype
+            <p class="text-lg text-gray-500 mb-12" style="font-family: 'Space Grotesk', sans-serif;">
+                Improving usability, clarity, and speed through a structured UX process
+            </p>
+            <a href="#problem" class="inline-block bg-red-500 hover:bg-red-600 text-white px-10 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                Explore Solution →
             </a>
         </div>
     </section>
@@ -42,74 +59,86 @@
     <!-- Problem Section -->
     <section id="problem" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">The Problem</h2>
+            <h2 class="text-5xl font-bold text-gray-900 mb-4 text-center" style="font-family: 'Archivo', sans-serif;">The Problem</h2>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">UX friction in current drive-thru systems</p>
+
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">UX Friction in Current Systems</h3>
-                    <ul class="space-y-4 text-gray-700">
-                        <li class="flex items-start gap-3">
-                            <span class="text-red-500 font-bold">•</span>
-                            <span>Complex menu navigation causing user confusion</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-red-500 font-bold">•</span>
-                            <span>Unclear visual hierarchy leading to slower interactions</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-red-500 font-bold">•</span>
-                            <span>Inconsistent button placement and labeling</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-red-500 font-bold">•</span>
-                            <span>High cognitive load during ordering process</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-red-500 font-bold">•</span>
-                            <span>Poor feedback on user actions and system state</span>
-                        </li>
-                    </ul>
+                <div class="space-y-4">
+                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                        <h3 class="font-bold text-gray-900 mb-2">Complex Navigation</h3>
+                        <p class="text-gray-600">Confusing menus that slow down user experience</p>
+                    </div>
+                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                        <h3 class="font-bold text-gray-900 mb-2">Unclear Visual Hierarchy</h3>
+                        <p class="text-gray-600">Lack of clarity in primary information presentation</p>
+                    </div>
+                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                        <h3 class="font-bold text-gray-900 mb-2">High Cognitive Load</h3>
+                        <p class="text-gray-600">Too many steps in the ordering flow</p>
+                    </div>
+                    <div class="bg-red-50 border-l-4 border-red-500 p-6 rounded-r-lg">
+                        <h3 class="font-bold text-gray-900 mb-2">Poor Feedback</h3>
+                        <p class="text-gray-600">Lack of clear feedback on user actions</p>
+                    </div>
                 </div>
-                <div class="bg-gray-100 rounded-lg p-8 h-80 flex items-center justify-center text-gray-500">
-                    <p>Current System Screenshot Placeholder</p>
+                <div class="bg-gray-100 rounded-2xl p-8 h-96 flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gray-200/50 to-gray-300/50"></div>
+                    <div class="text-center relative z-10">
+                        <svg class="w-16 h-16 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="9"></line>
+                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                        </svg>
+                        <p class="text-gray-600 font-semibold">Current System</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solution Section -->
-    <section id="solution" class="py-20 bg-gray-50">
+    <!-- Solution Section - Product Cards Inspired -->
+    <section id="solution" class="py-20 bg-gradient-to-b from-amber-50 to-orange-50">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">Our Solution</h2>
-            <div class="space-y-12">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div class="bg-gray-200 rounded-lg p-8 h-80 flex items-center justify-center text-gray-500">
-                        <img src="assets/screenshots/Bienvenido.png" alt="Welcome Screen" class="max-w-full h-auto">
+            <h2 class="text-5xl font-bold text-gray-900 mb-4 text-center" style="font-family: 'Archivo', sans-serif;">Our Solution</h2>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">Optimized interface for speed and clarity</p>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
                     </div>
-                    <div>
-                        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Redesign Logic</h3>
-                        <ul class="space-y-4 text-gray-700">
-                            <li class="flex items-start gap-3">
-                                <span class="text-green-500 font-bold">✓</span>
-                                <span>Simplified navigation with clear visual hierarchy</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-green-500 font-bold">✓</span>
-                                <span>Consistent, predictable interface patterns</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-green-500 font-bold">✓</span>
-                                <span>Large, touch-friendly interactive elements</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-green-500 font-bold">✓</span>
-                                <span>Clear status indicators and user feedback</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-green-500 font-bold">✓</span>
-                                <span>Reduced steps in the ordering workflow</span>
-                            </li>
-                        </ul>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3" style="font-family: 'Archivo', sans-serif;">Simplified Navigation</h3>
+                    <p class="text-gray-600">Category-based menu with clear visual hierarchy and focus on primary action</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M9 19V6l12-3v13M9 6H7a2 2 0 00-2 2v10a2 2 0 002 2h2m0-16l8-2"></path>
+                        </svg>
                     </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3" style="font-family: 'Archivo', sans-serif;">Consistent Patterns</h3>
+                    <p class="text-gray-600">44px+ buttons, uniform spacing, and predictable elements throughout</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <path d="M12 1v6m0 6v6M4.22 4.22l4.24 4.24m5.08 0l4.24-4.24M1 12h6m6 0h6m-16.78 7.78l4.24-4.24m5.08 0l4.24 4.24"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3" style="font-family: 'Archivo', sans-serif;">Immediate Feedback</h3>
+                    <p class="text-gray-600">Instant visual response on every interaction with smooth animations</p>
+                </div>
+            </div>
+
+            <!-- Screen Preview -->
+            <div class="bg-white rounded-3xl overflow-hidden shadow-2xl">
+                <div class="relative">
+                    <img src="assets/screenshots/Bienvenido.png" alt="Welcome Screen" class="w-full h-auto object-cover">
                 </div>
             </div>
         </div>
@@ -118,78 +147,147 @@
     <!-- Process Section -->
     <section id="process" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">Our Process</h2>
-            <div class="grid md:grid-cols-4 gap-8">
+            <h2 class="text-5xl font-bold text-gray-900 mb-4 text-center" style="font-family: 'Archivo', sans-serif;">Our Process</h2>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">Structured UX methodology</p>
+
+            <div class="grid md:grid-cols-4 gap-6 mb-16">
                 <div class="text-center">
-                    <div class="bg-gray-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Research</h3>
-                    <p class="text-gray-600">User interviews and behavioral analysis to understand pain points in the current drive-thru experience.</p>
+                    <div class="bg-gradient-to-br from-red-500 to-red-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 text-3xl font-bold shadow-lg">1</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" style="font-family: 'Archivo', sans-serif;">Research</h3>
+                    <p class="text-gray-600 text-sm">User interviews and analysis of current ordering system</p>
                 </div>
                 <div class="text-center">
-                    <div class="bg-gray-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Wireframing</h3>
-                    <p class="text-gray-600">Low-fidelity wireframes mapping out the optimal user flow and information architecture.</p>
+                    <div class="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 text-3xl font-bold shadow-lg">2</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" style="font-family: 'Archivo', sans-serif;">Wireframing</h3>
+                    <p class="text-gray-600 text-sm">Low-fidelity prototypes of optimal user flow</p>
                 </div>
                 <div class="text-center">
-                    <div class="bg-gray-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Iteration</h3>
-                    <p class="text-gray-600">Rapid prototyping and refinement based on user testing and feedback loops.</p>
+                    <div class="bg-gradient-to-br from-amber-500 to-amber-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 text-3xl font-bold shadow-lg">3</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" style="font-family: 'Archivo', sans-serif;">Iteration</h3>
+                    <p class="text-gray-600 text-sm">Rapid prototyping and refinement based on user testing</p>
                 </div>
                 <div class="text-center">
-                    <div class="bg-gray-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Prototype</h3>
-                    <p class="text-gray-600">Interactive prototype built in Stitch demonstrating the final solution.</p>
+                    <div class="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-6 text-3xl font-bold shadow-lg">4</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3" style="font-family: 'Archivo', sans-serif;">Prototype</h3>
+                    <p class="text-gray-600 text-sm">Final interactive prototype in Stitch and testing</p>
+                </div>
+            </div>
+
+            <!-- Screen Gallery -->
+            <div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center" style="font-family: 'Archivo', sans-serif;">Interface Screens</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="assets/screenshots/Menu.png" alt="Menu Screen" class="w-full h-auto object-cover">
+                        <div class="bg-gray-50 p-4">
+                            <p class="text-sm font-semibold text-gray-900">Main Menu</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="assets/screenshots/Favoritos.png" alt="Favorites Screen" class="w-full h-auto object-cover">
+                        <div class="bg-gray-50 p-4">
+                            <p class="text-sm font-semibold text-gray-900">Favorites</p>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <img src="assets/screenshots/Pago.png" alt="Payment Screen" class="w-full h-auto object-cover">
+                        <div class="bg-gray-50 p-4">
+                            <p class="text-sm font-semibold text-gray-900">Payment Methods</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- System Overview Section -->
-    <section id="system" class="py-20 bg-gray-50">
+    <section id="system" class="py-20 bg-gradient-to-b from-orange-50 to-amber-50">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">System Overview</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">User Flow</h3>
-                    <p class="text-gray-700 mb-4">
-                        The redesigned flow guides users through a streamlined ordering process with clear decision points and confirmation steps.
-                    </p>
-                    <ul class="space-y-3 text-gray-700">
-                        <li><strong>Entry:</strong> Welcome screen with primary action</li>
-                        <li><strong>Selection:</strong> Category-based menu navigation</li>
-                        <li><strong>Customization:</strong> Item-specific preferences</li>
-                        <li><strong>Review:</strong> Order confirmation with editable items</li>
-                        <li><strong>Completion:</strong> Payment and order submission</li>
-                    </ul>
+            <h2 class="text-5xl font-bold text-gray-900 mb-4 text-center" style="font-family: 'Archivo', sans-serif;">System Overview</h2>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">Optimized user flow</p>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-12">
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6" style="font-family: 'Archivo', sans-serif;">User Flow</h3>
+                    <ol class="space-y-4 text-gray-700">
+                        <li class="flex items-start gap-4">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500 text-white font-bold text-sm flex-shrink-0 mt-0.5">1</span>
+                            <span><strong>Welcome:</strong> Clear initial screen with primary action</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500 text-white font-bold text-sm flex-shrink-0 mt-0.5">2</span>
+                            <span><strong>Selection:</strong> Category-based menu navigation</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500 text-white font-bold text-sm flex-shrink-0 mt-0.5">3</span>
+                            <span><strong>Customization:</strong> Product-specific options</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500 text-white font-bold text-sm flex-shrink-0 mt-0.5">4</span>
+                            <span><strong>Review:</strong> Editable order confirmation</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500 text-white font-bold text-sm flex-shrink-0 mt-0.5">5</span>
+                            <span><strong>Complete:</strong> Payment confirmation and submission</span>
+                        </li>
+                    </ol>
                 </div>
-                <div>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Interaction Logic</h3>
-                    <p class="text-gray-700 mb-4">
-                        Predictable, touch-optimized interactions with immediate visual feedback on every action.
-                    </p>
-                    <ul class="space-y-3 text-gray-700">
-                        <li><strong>Touch Targets:</strong> Minimum 44px for accessibility</li>
-                        <li><strong>Feedback:</strong> Instant visual and haptic feedback</li>
-                        <li><strong>Navigation:</strong> Back button always available</li>
-                        <li><strong>Error Handling:</strong> Clear error messages with recovery options</li>
-                        <li><strong>Performance:</strong> Sub-100ms response times</li>
+
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6" style="font-family: 'Archivo', sans-serif;">Interaction Principles</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 font-bold text-lg">✓</span>
+                            <span><strong>Touch Targets:</strong> Minimum 44x44px for full accessibility</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 font-bold text-lg">✓</span>
+                            <span><strong>Visual Feedback:</strong> Instant feedback on every action</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 font-bold text-lg">✓</span>
+                            <span><strong>Clear Navigation:</strong> Back button always available</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 font-bold text-lg">✓</span>
+                            <span><strong>Error Handling:</strong> Clear messages with recovery options</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-500 font-bold text-lg">✓</span>
+                            <span><strong>Performance:</strong> Response times under 100ms</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-            <div class="mt-12 bg-white rounded-lg p-8 border-2 border-gray-200">
-                <h3 class="text-2xl font-semibold text-gray-900 mb-6">Conceptual System Architecture</h3>
-                <div class="grid md:grid-cols-3 gap-6 text-center">
-                    <div class="p-4 bg-gray-100 rounded">
-                        <p class="font-semibold text-gray-900">Frontend Interface</p>
-                        <p class="text-sm text-gray-600 mt-2">Touch-optimized UI components</p>
+
+            <!-- Color Palette -->
+            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center" style="font-family: 'Archivo', sans-serif;">Color Palette</h3>
+                <div class="grid md:grid-cols-5 gap-6">
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-gradient-to-br from-rose-50 to-amber-50 rounded-lg mx-auto mb-3 border-2 border-gray-200"></div>
+                        <p class="text-sm font-semibold text-gray-900">Primary Background</p>
+                        <p class="text-xs text-gray-500">#FDF2F8 → #FEFCE8</p>
                     </div>
-                    <div class="p-4 bg-gray-100 rounded">
-                        <p class="font-semibold text-gray-900">State Management</p>
-                        <p class="text-sm text-gray-600 mt-2">Order data and user session tracking</p>
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-red-500 rounded-lg mx-auto mb-3"></div>
+                        <p class="text-sm font-semibold text-gray-900">Primary Action</p>
+                        <p class="text-xs text-gray-500">#FF2E44</p>
                     </div>
-                    <div class="p-4 bg-gray-100 rounded">
-                        <p class="font-semibold text-gray-900">Backend Service</p>
-                        <p class="text-sm text-gray-600 mt-2">Order processing and integration</p>
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-green-500 rounded-lg mx-auto mb-3"></div>
+                        <p class="text-sm font-semibold text-gray-900">Success</p>
+                        <p class="text-xs text-gray-500">#22C55E</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-gray-900 rounded-lg mx-auto mb-3"></div>
+                        <p class="text-sm font-semibold text-gray-900">Primary Text</p>
+                        <p class="text-xs text-gray-500">#0F172A</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-24 h-24 bg-white rounded-lg mx-auto mb-3 border-2 border-gray-200"></div>
+                        <p class="text-sm font-semibold text-gray-900">Cards</p>
+                        <p class="text-xs text-gray-500">#FFFFFF</p>
                     </div>
                 </div>
             </div>
@@ -199,64 +297,132 @@
     <!-- Team Section -->
     <section id="team" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">Team</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="bg-gray-300 rounded-full w-32 h-32 mx-auto mb-6"></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Team Member</h3>
-                    <p class="text-gray-600 mb-2">UX/UI Designer</p>
-                    <p class="text-sm text-gray-500">Research, Wireframing, Prototyping</p>
+            <h2 class="text-5xl font-bold text-gray-900 mb-4 text-center" style="font-family: 'Archivo', sans-serif;">The Team</h2>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">Meet the talented professionals behind this redesign</p>
+
+            <div class="grid md:grid-cols-5 gap-8">
+                <!-- Team Member 1 -->
+                <div class="text-center group">
+                    <div class="relative mb-6 mx-auto w-32 h-32 overflow-hidden rounded-2xl shadow-lg">
+                        <div class="w-full h-full bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-red-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <img src="assets/team/member1.jpg" alt="Team Member 1" class="w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-0">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" style="font-family: 'Archivo', sans-serif;">Alex Rivera</h3>
+                    <p class="text-red-600 font-semibold mb-2">Lead UX Designer</p>
+                    <p class="text-sm text-gray-600">Research, wireframing, user testing, and design system architecture</p>
                 </div>
-                <div class="text-center">
-                    <div class="bg-gray-300 rounded-full w-32 h-32 mx-auto mb-6"></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Team Member</h3>
-                    <p class="text-gray-600 mb-2">Product Manager</p>
-                    <p class="text-sm text-gray-500">Strategy, Stakeholder Management</p>
+
+                <!-- Team Member 2 -->
+                <div class="text-center group">
+                    <div class="relative mb-6 mx-auto w-32 h-32 overflow-hidden rounded-2xl shadow-lg">
+                        <div class="w-full h-full bg-gradient-to-br from-orange-100 to-orange-200 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-orange-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <img src="assets/team/member2.jpg" alt="Team Member 2" class="w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-0">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" style="font-family: 'Archivo', sans-serif;">María Chen</h3>
+                    <p class="text-orange-600 font-semibold mb-2">Product Manager</p>
+                    <p class="text-sm text-gray-600">Strategy, stakeholder management, user interviews</p>
                 </div>
-                <div class="text-center">
-                    <div class="bg-gray-300 rounded-full w-32 h-32 mx-auto mb-6"></div>
-                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Team Member</h3>
-                    <p class="text-gray-600 mb-2">Frontend Developer</p>
-                    <p class="text-sm text-gray-500">Implementation, Interaction Design</p>
+
+                <!-- Team Member 3 -->
+                <div class="text-center group">
+                    <div class="relative mb-6 mx-auto w-32 h-32 overflow-hidden rounded-2xl shadow-lg">
+                        <div class="w-full h-full bg-gradient-to-br from-amber-100 to-amber-200 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-amber-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <img src="assets/team/member3.jpg" alt="Team Member 3" class="w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-0">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" style="font-family: 'Archivo', sans-serif;">Jordan Smith</h3>
+                    <p class="text-amber-600 font-semibold mb-2">Visual Designer</p>
+                    <p class="text-sm text-gray-600">UI design, prototyping, interaction design, branding</p>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="text-center group">
+                    <div class="relative mb-6 mx-auto w-32 h-32 overflow-hidden rounded-2xl shadow-lg">
+                        <div class="w-full h-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-green-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <img src="assets/team/member4.jpg" alt="Team Member 4" class="w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-0">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" style="font-family: 'Archivo', sans-serif;">Sam Martinez</h3>
+                    <p class="text-green-600 font-semibold mb-2">Frontend Developer</p>
+                    <p class="text-sm text-gray-600">Implementation, interactive prototyping, performance</p>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="text-center group">
+                    <div class="relative mb-6 mx-auto w-32 h-32 overflow-hidden rounded-2xl shadow-lg">
+                        <div class="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+                            <svg class="w-16 h-16 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <img src="assets/team/member5.jpg" alt="Team Member 5" class="w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-0">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2" style="font-family: 'Archivo', sans-serif;">Taylor Kim</h3>
+                    <p class="text-blue-600 font-semibold mb-2">UX Researcher</p>
+                    <p class="text-sm text-gray-600">User testing, analytics, accessibility compliance</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Impact Section -->
-    <section id="impact" class="py-20 bg-gray-50">
+    <section id="impact" class="py-20 bg-white">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">Impact</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg p-8 text-center shadow-md">
-                    <p class="text-5xl font-bold text-gray-900 mb-2">35%</p>
-                    <p class="text-gray-700 font-semibold">Reduction in Cognitive Load</p>
-                    <p class="text-sm text-gray-600 mt-3">Simplified navigation and clearer visual hierarchy</p>
+            <h2 class="text-5xl font-bold text-gray-900 mb-4 text-center" style="font-family: 'Archivo', sans-serif;">Impact</h2>
+            <p class="text-xl text-gray-600 text-center mb-16 max-w-2xl mx-auto">Measurable results from the redesign</p>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-3xl p-8 text-center border-2 border-red-200 hover:shadow-xl transition-shadow duration-300">
+                    <p class="text-6xl font-bold text-red-600 mb-3">35%</p>
+                    <p class="text-xl font-bold text-gray-900 mb-2">Cognitive Load Reduction</p>
+                    <p class="text-gray-700">Simplified navigation and clearer visual hierarchy</p>
                 </div>
-                <div class="bg-white rounded-lg p-8 text-center shadow-md">
-                    <p class="text-5xl font-bold text-gray-900 mb-2">40%</p>
-                    <p class="text-gray-700 font-semibold">Fewer Steps in Workflow</p>
-                    <p class="text-sm text-gray-600 mt-3">Streamlined ordering process optimized for speed</p>
+
+                <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 text-center border-2 border-green-200 hover:shadow-xl transition-shadow duration-300">
+                    <p class="text-6xl font-bold text-green-600 mb-3">40%</p>
+                    <p class="text-xl font-bold text-gray-900 mb-2">Fewer Steps in Workflow</p>
+                    <p class="text-gray-700">Streamlined ordering process optimized for speed</p>
                 </div>
-                <div class="bg-white rounded-lg p-8 text-center shadow-md">
-                    <p class="text-5xl font-bold text-gray-900 mb-2">95%</p>
-                    <p class="text-gray-700 font-semibold">Improved Clarity</p>
-                    <p class="text-sm text-gray-600 mt-3">User satisfaction with interface understandability</p>
+
+                <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 text-center border-2 border-blue-200 hover:shadow-xl transition-shadow duration-300">
+                    <p class="text-6xl font-bold text-blue-600 mb-3">95%</p>
+                    <p class="text-xl font-bold text-gray-900 mb-2">Clarity Improvement</p>
+                    <p class="text-gray-700">User satisfaction with interface understandability</p>
                 </div>
             </div>
-            <div class="mt-12 text-center">
-                <p class="text-xl text-gray-700 max-w-2xl mx-auto">
-                    The redesigned Caffenio drive-thru interface demonstrates how structured UX methodology and user-centered design can significantly improve operational efficiency and user satisfaction.
-                </p>
+
+            <!-- Success Screen -->
+            <div class="rounded-3xl overflow-hidden shadow-2xl max-w-md mx-auto">
+                <img src="assets/screenshots/Finalizado.png" alt="Success Screen" class="w-full h-auto object-cover">
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
+    <footer class="bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12">
         <div class="max-w-6xl mx-auto px-6 text-center">
-            <p>&copy; 2024 CODEX Portfolio. All rights reserved.</p>
-            <p class="text-gray-400 mt-2">Caffenio Drive-Thru Interface Redesign Case Study</p>
+            <p class="text-lg font-semibold mb-2" style="font-family: 'Archivo', sans-serif;">CODEX Team</p>
+            <p class="text-gray-400">Caffenio Drive-Thru Interface Redesign - Case Study 2024</p>
+            <p class="text-gray-500 text-sm mt-6">Developed with focus on UX and optimized touch interaction</p>
         </div>
     </footer>
 

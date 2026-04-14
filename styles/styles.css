@@ -1,90 +1,233 @@
-/* Additional custom styles for CODEX Portfolio */
+/* CODEX Portfolio - Caffenio Design System Styles */
 
 * {
     scroll-behavior: smooth;
 }
 
+:root {
+    /* Caffenio Color Palette */
+    --color-primary: #FF2E44;
+    --color-success: #22C55E;
+    --color-bg-light: #FDF2F8;
+    --color-text-dark: #0F172A;
+    --color-text-muted: #6B7280;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--color-text-dark);
+    background: linear-gradient(135deg, #FDF2F8 0%, #FEFCE8 100%);
 }
 
-/* Navigation smooth scroll styling */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Archivo', sans-serif;
+}
+
+/* Navigation */
 nav {
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 46, 68, 0.1);
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    nav ul {
-        gap: 1rem;
-    }
-
-    nav a {
-        font-size: 0.875rem;
-    }
-
-    section {
-        margin-top: 4rem;
-    }
-}
-
-/* Smooth scroll behavior for anchor links */
-a[href^="#"] {
-    transition: color 0.3s ease;
-}
-
-/* Add active navigation styling */
 .nav-link {
     position: relative;
     font-weight: 500;
+    font-size: 0.95rem;
 }
 
 .nav-link::after {
     content: '';
     position: absolute;
-    bottom: -2px;
+    bottom: -4px;
     left: 0;
     width: 0;
     height: 2px;
-    background-color: currentColor;
-    transition: width 0.3s ease;
+    background: linear-gradient(90deg, #FF2E44 0%, #FF6B7A 100%);
+    transition: width 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .nav-link:hover::after {
     width: 100%;
 }
 
-/* Image optimization */
+/* Buttons - Touch Friendly */
+button, a[class*="bg-red"], a[class*="bg-green"], a[class*="bg-orange"] {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* CTA Buttons */
+.bg-red-500 {
+    background-color: var(--color-primary);
+    box-shadow: 0 8px 16px rgba(255, 46, 68, 0.2);
+}
+
+.bg-red-500:hover {
+    background-color: #E82035;
+    box-shadow: 0 12px 24px rgba(255, 46, 68, 0.3);
+    transform: translateY(-4px);
+}
+
+/* Green Success */
+.bg-green-500 {
+    background-color: var(--color-success);
+    box-shadow: 0 8px 16px rgba(34, 197, 94, 0.2);
+}
+
+.bg-green-500:hover {
+    background-color: #16A34A;
+    box-shadow: 0 12px 24px rgba(34, 197, 94, 0.3);
+}
+
+/* Card Hover Effects */
+.shadow-lg {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.hover\:shadow-xl:hover,
+.hover\:shadow-2xl:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Transform animations */
+.transform {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hover\:-translate-y-2:hover {
+    transform: translateY(-8px);
+}
+
+/* Images */
 img {
     display: block;
     max-width: 100%;
     height: auto;
+    border-radius: inherit;
+    transition: transform 0.3s ease;
 }
 
-/* Section spacing consistency */
+.rounded-2xl img:hover {
+    transform: scale(1.02);
+}
+
+/* Section Spacing */
 section {
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 80px;
 }
 
-/* Typography improvements */
-h1, h2, h3 {
-    letter-spacing: -0.025em;
+section h2 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
 }
 
-/* Button hover effects */
-a[class*="bg-"] {
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #FF2E44 0%, #FF6B7A 100%);
+    border-radius: 2px;
+    opacity: 0;
+    animation: slideInUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-to-b {
+    background: linear-gradient(180deg, #FDF2F8 0%, #FEFCE8 100%);
+}
+
+.bg-gradient-to-br {
+    background: linear-gradient(135deg, currentColor 0%, var(--color-primary) 100%);
+}
+
+/* Decorative Elements */
+.rounded-full {
+    border-radius: 9999px;
     transition: all 0.3s ease;
 }
 
-a[class*="bg-gray-900"]:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+/* Touch Target Accessibility */
+button, [role="button"], a, input[type="checkbox"], input[type="radio"] {
+    min-width: 44px;
+    min-height: 44px;
 }
 
-/* Grid responsive helpers */
-@media (max-width: 640px) {
-    .grid {
-        gap: 1.5rem;
+/* Focus States for Accessibility */
+:focus {
+    outline: 3px solid rgba(255, 46, 68, 0.5);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Animations */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    section {
+        padding: 3rem 1.5rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+    body {
+        font-size: 16px; /* Prevents zoom on iOS */
     }
 
     h1 {
@@ -92,10 +235,54 @@ a[class*="bg-gray-900"]:hover {
     }
 
     h2 {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
     }
 
-    h3 {
-        font-size: 1.25rem;
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    button, a[class*="bg-"], .rounded-full {
+        min-height: 48px; /* Extra large on mobile */
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-text-dark: #F8FAFC;
+        --color-text-muted: #CBD5E1;
+    }
+
+    body {
+        background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+        color: var(--color-text-dark);
+    }
+
+    .bg-white {
+        background-color: #1F2937;
+    }
+
+    .text-gray-900 {
+        color: #F0F9FF;
+    }
+
+    .text-gray-600 {
+        color: #CBD5E1;
+    }
+}
+
+/* Print Styles */
+@media print {
+    nav, footer {
+        display: none;
+    }
+
+    section {
+        page-break-inside: avoid;
     }
 }
