@@ -13,13 +13,34 @@
     <nav class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md shadow-sm z-50">
         <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
             <h1 class="text-2xl font-bold text-gray-900" style="font-family: 'Archivo', sans-serif;">CODEX</h1>
-            <ul class="flex gap-6 text-sm">
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-6 text-sm">
                 <li><a href="#hero" class="nav-link text-gray-700 hover:text-red-600 transition">Home</a></li>
                 <li><a href="#problem" class="nav-link text-gray-700 hover:text-red-600 transition">Problem</a></li>
                 <li><a href="#solution" class="nav-link text-gray-700 hover:text-red-600 transition">Solution</a></li>
                 <li><a href="#process" class="nav-link text-gray-700 hover:text-red-600 transition">Process</a></li>
                 <li><a href="#team" class="nav-link text-gray-700 hover:text-red-600 transition">Team</a></li>
                 <li><a href="#impact" class="nav-link text-gray-700 hover:text-red-600 transition">Impact</a></li>
+            </ul>
+
+            <!-- Hamburger Menu Button (Mobile) -->
+            <button id="hamburger-btn" class="md:hidden flex flex-col gap-2 p-2" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
+                <span class="hamburger-line w-6 h-0.5 bg-gray-900 transition-all duration-300"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu bg-white border-t border-gray-200 md:hidden">
+            <ul class="flex flex-col gap-0">
+                <li><a href="#hero" class="nav-link block px-6 py-3 text-gray-700 hover:text-red-600 hover:bg-red-50 transition border-b border-gray-100">Home</a></li>
+                <li><a href="#problem" class="nav-link block px-6 py-3 text-gray-700 hover:text-red-600 hover:bg-red-50 transition border-b border-gray-100">Problem</a></li>
+                <li><a href="#solution" class="nav-link block px-6 py-3 text-gray-700 hover:text-red-600 hover:bg-red-50 transition border-b border-gray-100">Solution</a></li>
+                <li><a href="#process" class="nav-link block px-6 py-3 text-gray-700 hover:text-red-600 hover:bg-red-50 transition border-b border-gray-100">Process</a></li>
+                <li><a href="#team" class="nav-link block px-6 py-3 text-gray-700 hover:text-red-600 hover:bg-red-50 transition border-b border-gray-100">Team</a></li>
+                <li><a href="#impact" class="nav-link block px-6 py-3 text-gray-700 hover:text-red-600 hover:bg-red-50 transition">Impact</a></li>
             </ul>
         </div>
     </nav>

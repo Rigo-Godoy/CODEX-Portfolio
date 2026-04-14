@@ -1,20 +1,70 @@
 // CODEX Portfolio - JavaScript Interactions
 
+// Hamburger Menu Toggle
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+if (hamburgerBtn && mobileMenu) {
+    // Toggle menu on button click
+    hamburgerBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hamburgerBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        hamburgerBtn.setAttribute('aria-expanded', hamburgerBtn.classList.contains('active'));
+    });
+
+    // Close menu when a link is clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            // Remove active states after a short delay to allow smooth scroll
+            setTimeout(() => {
+                hamburgerBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+            }, 100);
+        });
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const isClickInsideMenu = mobileMenu.contains(e.target);
+        const isClickInsideButton = hamburgerBtn.contains(e.target);
+
+        if (!isClickInsideMenu && !isClickInsideButton && mobileMenu.classList.contains('active')) {
+            hamburgerBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+            hamburgerBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+}
+
 // Smooth scroll navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
+
         if (target) {
+            e.preventDefault();
             target.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start'
             });
 
             // Add visual feedback
+            const originalOpacity = this.style.opacity;
             this.style.opacity = '0.7';
             setTimeout(() => {
-                this.style.opacity = '1';
+                this.style.opacity = originalOpacity || '1';
             }, 300);
         }
     });
@@ -141,6 +191,9 @@ document.querySelectorAll('.rounded-3xl').forEach(card => {
 // Add ripple effect on button click (touch feedback)
 document.querySelectorAll('button, a[class*="bg-red"], .bg-red-500, .bg-green-500, a.inline-block').forEach(btn => {
     btn.addEventListener('click', function(e) {
+        // Only add ripple if it's not the hamburger menu button
+        if (this.id === 'hamburger-btn') return;
+
         // Create ripple
         const ripple = document.createElement('span');
         const rect = this.getBoundingClientRect();
@@ -220,18 +273,5 @@ if (prefersReducedMotion) {
 window.addEventListener('load', () => {
     document.body.style.opacity = '1';
 });
-
-// Add smooth scrolling polyfill for older browsers
-if (!('scrollBehavior' in document.documentElement.style)) {
-    document.addEventListener('click', function(e) {
-        if (e.target.hash) {
-            e.preventDefault();
-            const target = document.querySelector(e.target.hash);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-    });
-}
 
 console.log('CODEX Portfolio - Caffenio Case Study loaded ✨');
