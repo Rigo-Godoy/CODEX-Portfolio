@@ -3,12 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CODEX Portfolio - Caffenio Drive-Thru Interface Redesign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <section class="screens">
-  <h2>Nuestra Solución</h2>
-  <img src="assets/screenshots/Bienvenido.png" alt="Pantalla principal">
-</section>
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">CODEX</h1>
+            <ul class="flex gap-8">
+                <li><a href="#hero" class="nav-link text-gray-700 hover:text-gray-900">Home</a></li>
+                <li><a href="#problem" class="nav-link text-gray-700 hover:text-gray-900">Problem</a></li>
+                <li><a href="#solution" class="nav-link text-gray-700 hover:text-gray-900">Solution</a></li>
+                <li><a href="#process" class="nav-link text-gray-700 hover:text-gray-900">Process</a></li>
+                <li><a href="#team" class="nav-link text-gray-700 hover:text-gray-900">Team</a></li>
+                <li><a href="#impact" class="nav-link text-gray-700 hover:text-gray-900">Impact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-20 min-h-screen bg-gradient-to-b from-gray-50 to-white flex items-center">
+        <div class="max-w-6xl mx-auto px-6 w-full text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+                Caffenio Drive-Thru Interface Redesign
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Improving usability, clarity, and speed through structured UX process and interactive prototyping
+            </p>
+            <p class="text-lg text-gray-500 mb-12">By CODEX Team</p>
+            <a href="#problem" class="inline-block bg-gray-900 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition">
+                View Prototype
+            </a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section id="problem" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">The Problem</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">UX Friction in Current Systems</h3>
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold">•</span>
+                            <span>Complex menu navigation causing user confusion</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold">•</span>
+                            <span>Unclear visual hierarchy leading to slower interactions</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold">•</span>
+                            <span>Inconsistent button placement and labeling</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold">•</span>
+                            <span>High cognitive load during ordering process</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-red-500 font-bold">•</span>
+                            <span>Poor feedback on user actions and system state</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-gray-100 rounded-lg p-8 h-80 flex items-center justify-center text-gray-500">
+                    <p>Current System Screenshot Placeholder</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">Our Solution</h2>
+            <div class="space-y-12">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="bg-gray-200 rounded-lg p-8 h-80 flex items-center justify-center text-gray-500">
+                        <img src="assets/screenshots/Bienvenido.png" alt="Welcome Screen" class="max-w-full h-auto">
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-6">Redesign Logic</h3>
+                        <ul class="space-y-4 text-gray-700">
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span>Simplified navigation with clear visual hierarchy</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span>Consistent, predictable interface patterns</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span>Large, touch-friendly interactive elements</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span>Clear status indicators and user feedback</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-500 font-bold">✓</span>
+                                <span>Reduced steps in the ordering workflow</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">Our Process</h2>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-gray-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Research</h3>
+                    <p class="text-gray-600">User interviews and behavioral analysis to understand pain points in the current drive-thru experience.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Wireframing</h3>
+                    <p class="text-gray-600">Low-fidelity wireframes mapping out the optimal user flow and information architecture.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Iteration</h3>
+                    <p class="text-gray-600">Rapid prototyping and refinement based on user testing and feedback loops.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-900 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Prototype</h3>
+                    <p class="text-gray-600">Interactive prototype built in Stitch demonstrating the final solution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Overview Section -->
+    <section id="system" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">System Overview</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">User Flow</h3>
+                    <p class="text-gray-700 mb-4">
+                        The redesigned flow guides users through a streamlined ordering process with clear decision points and confirmation steps.
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><strong>Entry:</strong> Welcome screen with primary action</li>
+                        <li><strong>Selection:</strong> Category-based menu navigation</li>
+                        <li><strong>Customization:</strong> Item-specific preferences</li>
+                        <li><strong>Review:</strong> Order confirmation with editable items</li>
+                        <li><strong>Completion:</strong> Payment and order submission</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">Interaction Logic</h3>
+                    <p class="text-gray-700 mb-4">
+                        Predictable, touch-optimized interactions with immediate visual feedback on every action.
+                    </p>
+                    <ul class="space-y-3 text-gray-700">
+                        <li><strong>Touch Targets:</strong> Minimum 44px for accessibility</li>
+                        <li><strong>Feedback:</strong> Instant visual and haptic feedback</li>
+                        <li><strong>Navigation:</strong> Back button always available</li>
+                        <li><strong>Error Handling:</strong> Clear error messages with recovery options</li>
+                        <li><strong>Performance:</strong> Sub-100ms response times</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 bg-white rounded-lg p-8 border-2 border-gray-200">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6">Conceptual System Architecture</h3>
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <div class="p-4 bg-gray-100 rounded">
+                        <p class="font-semibold text-gray-900">Frontend Interface</p>
+                        <p class="text-sm text-gray-600 mt-2">Touch-optimized UI components</p>
+                    </div>
+                    <div class="p-4 bg-gray-100 rounded">
+                        <p class="font-semibold text-gray-900">State Management</p>
+                        <p class="text-sm text-gray-600 mt-2">Order data and user session tracking</p>
+                    </div>
+                    <div class="p-4 bg-gray-100 rounded">
+                        <p class="font-semibold text-gray-900">Backend Service</p>
+                        <p class="text-sm text-gray-600 mt-2">Order processing and integration</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">Team</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-gray-300 rounded-full w-32 h-32 mx-auto mb-6"></div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Team Member</h3>
+                    <p class="text-gray-600 mb-2">UX/UI Designer</p>
+                    <p class="text-sm text-gray-500">Research, Wireframing, Prototyping</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-300 rounded-full w-32 h-32 mx-auto mb-6"></div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Team Member</h3>
+                    <p class="text-gray-600 mb-2">Product Manager</p>
+                    <p class="text-sm text-gray-500">Strategy, Stakeholder Management</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gray-300 rounded-full w-32 h-32 mx-auto mb-6"></div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Team Member</h3>
+                    <p class="text-gray-600 mb-2">Frontend Developer</p>
+                    <p class="text-sm text-gray-500">Implementation, Interaction Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impact" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-gray-900 mb-12 text-center">Impact</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg p-8 text-center shadow-md">
+                    <p class="text-5xl font-bold text-gray-900 mb-2">35%</p>
+                    <p class="text-gray-700 font-semibold">Reduction in Cognitive Load</p>
+                    <p class="text-sm text-gray-600 mt-3">Simplified navigation and clearer visual hierarchy</p>
+                </div>
+                <div class="bg-white rounded-lg p-8 text-center shadow-md">
+                    <p class="text-5xl font-bold text-gray-900 mb-2">40%</p>
+                    <p class="text-gray-700 font-semibold">Fewer Steps in Workflow</p>
+                    <p class="text-sm text-gray-600 mt-3">Streamlined ordering process optimized for speed</p>
+                </div>
+                <div class="bg-white rounded-lg p-8 text-center shadow-md">
+                    <p class="text-5xl font-bold text-gray-900 mb-2">95%</p>
+                    <p class="text-gray-700 font-semibold">Improved Clarity</p>
+                    <p class="text-sm text-gray-600 mt-3">User satisfaction with interface understandability</p>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <p class="text-xl text-gray-700 max-w-2xl mx-auto">
+                    The redesigned Caffenio drive-thru interface demonstrates how structured UX methodology and user-centered design can significantly improve operational efficiency and user satisfaction.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <p>&copy; 2024 CODEX Portfolio. All rights reserved.</p>
+            <p class="text-gray-400 mt-2">Caffenio Drive-Thru Interface Redesign Case Study</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>

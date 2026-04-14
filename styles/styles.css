@@ -1,0 +1,101 @@
+/* Additional custom styles for CODEX Portfolio */
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Navigation smooth scroll styling */
+nav {
+    backdrop-filter: blur(4px);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav a {
+        font-size: 0.875rem;
+    }
+
+    section {
+        margin-top: 4rem;
+    }
+}
+
+/* Smooth scroll behavior for anchor links */
+a[href^="#"] {
+    transition: color 0.3s ease;
+}
+
+/* Add active navigation styling */
+.nav-link {
+    position: relative;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Image optimization */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Section spacing consistency */
+section {
+    scroll-margin-top: 5rem;
+}
+
+/* Typography improvements */
+h1, h2, h3 {
+    letter-spacing: -0.025em;
+}
+
+/* Button hover effects */
+a[class*="bg-"] {
+    transition: all 0.3s ease;
+}
+
+a[class*="bg-gray-900"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Grid responsive helpers */
+@media (max-width: 640px) {
+    .grid {
+        gap: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+}
